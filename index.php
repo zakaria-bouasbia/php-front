@@ -7,6 +7,8 @@ $Users = (new App\Classes\Users())->getAll($pdo);
 <?php foreach($Users as $user){ ?>
     <h1><?=$user["email"]?></h1>
 <?php } ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
