@@ -1,3 +1,12 @@
+<?php
+require 'config/db.php';
+require 'includes/users.php';
+$Users = (new App\Classes\Users())->getAll($pdo);
+?>
+
+<?php foreach($Users as $user){ ?>
+    <h1><?=$user["email"]?></h1>
+<?php } ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +18,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>Tableau De Bord</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -37,6 +46,7 @@
                 </div>
                 <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
             </a>
+
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
